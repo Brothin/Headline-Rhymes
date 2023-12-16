@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Headline Rhymes</title>
+    <style>
+      body {
+        width: 300px;
+        padding: 10px;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Fresca&display=swap" rel="stylesheet">
+    <script src="popup.js"></script>
+</head>
+  <body>
+    <header>
+      <p>Correct username is "user", password is "password", email id is "user@gmail.com"</p>
+    </header>
+    <section class="CheckBox">
+      <h1>Authenticate yourself</h1>
+      <form action="popup.html" method="post" name="authentication" id="authentication" class="authentication">
+        <label for="username">Enter your username :</label>
+        <br>
+        <input type="text" name="username" id="username" minlength="3" maxlenth="15" pattern="[a-zA-Z0-9]+" required>
+        <br>
+        <label for="password">Enter your password :</label>
+        <br>
+        <input type="password" name="password" id="password" minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+" required>
+        <br>
+        <label for="email">Enter your email :</label>
+        <br>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <input id="sub" type="submit" value="Submit" onclick="Verify();"></input>
+        <button id="rule" type="button" onclick="Show('rules');">Rules</button>
+      </form>
+      <div id="rules">
+        <ul>
+          <li>Username must have between 3 and 15 caracters</li>
+          <li>Password must have between 8 and 15 caracters</li>
+          <li>Username and Password required</li>
+          <li>Use only numbers and letters</li>
+        </ul>
+      </div>
+    </section>
+  </body>
+</html>

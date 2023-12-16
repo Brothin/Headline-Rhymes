@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Headline Rhymes",
+  "version": "1.0",
+  "description": "Transforms headlines into rhymes and adds bias summaries.",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_icon": "icon.png",
+    "default_popup": "index.html",
+    "default_title": "Headline Rhymes"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://timesofindia.indiatimes.com/"],
+        "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
